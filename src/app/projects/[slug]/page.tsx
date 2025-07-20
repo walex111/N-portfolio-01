@@ -8,11 +8,12 @@ export async function generateStaticParams() {
     slug: slugify(project.name),
   }));
 }
-interface ProjectDetailPageProps {
-  params: Record<string, string>;
-}
 
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export default function ProjectDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const slug = params.slug;
 
   if (typeof slug !== "string") return notFound();

@@ -9,11 +9,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectDetailPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+interface ProjectDetailPageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
   const slug = params.slug;
 
   if (typeof slug !== "string") return notFound();

@@ -4,7 +4,6 @@ import ImageCarousel from "@/components/ImageCarousel";
 import React from "react";
 import InfoData from "@/data/info";
 
-
 export default function page() {
   return (
     <section className="flex flex-col flex-1 justify-center space-y-10 font-spaceGro">
@@ -14,10 +13,10 @@ export default function page() {
           Full-Stack Developer <br />
           AI / ML Engineer
         </p>
-        <a href="#">
+        <div>
           <span className="font-muckley text-2xl">&copy; 2025 </span>
           <HistoryOrb />
-        </a>
+        </div>
       </div>
       <div className="flex space-y-4 items-center justify-between">
         <div className="hidden lg:block">

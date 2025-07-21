@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav className=" flex justify-between items-center font-spaceGro">
+    <nav className=" flex justify-between items-center lg:items-start font-spaceGro">
       <Link
         href="/"
         className="font-yukari flex justify-center items-center leading-10 text-5xl font-black"

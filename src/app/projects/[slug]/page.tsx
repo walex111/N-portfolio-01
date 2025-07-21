@@ -9,15 +9,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ProjectDetailPage({
+export default function ProjectDetailPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const slug = params.slug;
+  const { slug } = params;
 
   const project = projectsData.find((p) => slugify(p.name) === slug);
-
   if (!project) return notFound();
 
   return <ProjectDetailClient project={project} />;

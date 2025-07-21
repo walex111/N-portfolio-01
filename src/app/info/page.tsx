@@ -20,7 +20,7 @@ export default function page() {
         </a>
       </div>
       <div className="flex space-y-4 items-center justify-between">
-        <div>
+        <div className="hidden lg:block">
           <ImageCarousel />
           <p className="text-gray-500 text-sm mt-2 w-1/2">
             A collection of my <span className="font-bold">Jobs</span>,

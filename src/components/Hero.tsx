@@ -5,7 +5,7 @@ import { Link2Icon } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="font-spaceGro w-full flex items-center justify-between gap-8 text-center">
+    <section className="font-spaceGro w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:text-center ">
       <div className="max-w-xl text-start">
         <p>
           I build{" "}

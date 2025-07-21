@@ -9,13 +9,12 @@ export async function generateStaticParams() {
   }));
 }
 
-// Accept params as a Promise to satisfy the constraint
 export default async function ProjectDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // await because params is now a Promise
+  const { slug } = await params;
 
   const project = projectsData.find((p) => slugify(p.name) === slug);
   if (!project) return notFound();

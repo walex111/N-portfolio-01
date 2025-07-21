@@ -54,7 +54,7 @@ function ProjectCard({
       <h2 className="text-2xl font-bold text-center font-muckley">
         {project.name}
       </h2>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="hidden lg:grid grid-cols-3 gap-4">
         {project.projectImg?.slice(0, 3).map((img, i) => (
           <div
             key={i}

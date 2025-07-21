@@ -84,11 +84,13 @@ export default function Experience() {
                 viewport={{ once: true }}
               >
                 <div className="md:w-1/3 flex flex-col justify-between gap-1 font-muckley">
-                  <div>
-                    <p className="text-xl">{exp.experienceNo}</p>
-                    <h3 className="text-2xl font-black w-[80%] mb-5 uppercase">
-                      {exp.company}
-                    </h3>
+                  <div className="flex just-between items-center lg:block">
+                    <div>
+                      <p className="text-xl">{exp.experienceNo}</p>
+                      <h3 className="text-2xl font-black w-[80%] mb-5 uppercase">
+                        {exp.company}
+                      </h3>
+                    </div>
                     {exp.companySite && (
                       <Button
                         variant="outline"
@@ -106,12 +108,12 @@ export default function Experience() {
                       </Button>
                     )}
                   </div>
-                  <p className="text-sm font-spaceGro pr-5 text-gray-500">
+                  <p className="text-sm font-spaceGro pr-5 text-gray-500 hidden lg:block">
                     {exp.details}
                   </p>
                 </div>
 
-                <div className="md:w-2/3">
+                <div className="lg:w-2/3">
                   <a
                     href={exp.companySite}
                     target="_blank"
@@ -125,7 +127,7 @@ export default function Experience() {
                       alt="Project Preview"
                     />
                   </a>
-                  <div className="flex flex-wrap gap-8 pt-2">
+                  <div className="flex-wrap gap-8 pt-2 hidden lg:flex">
                     <div className="gap-4 flex flex-col">
                       <p className="font-semibold">Year:</p>
                       <p className="text-sm text-gray-500">{exp.year}</p>

@@ -9,16 +9,12 @@ export async function generateStaticParams() {
   }));
 }
 
-interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
+export default async function ProjectDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const slug = params.slug;
-
-  if (typeof slug !== "string") return notFound();
 
   const project = projectsData.find((p) => slugify(p.name) === slug);
 
